@@ -29,8 +29,12 @@ Aplicação web moderna, interativa e de alta performance desenvolvida especific
 2. **Calculadora Dinâmica de Custos de Impressão 3D (Evolt Special):**
    - Estimador interativo com seleção de materiais (PLA, PETG, ABS, Resina), controlo de gramas e horas de impressão.
    - Cálculo automático de custos de filamento, energia e preço recomendado de venda com margem operacional ajustável.
-3. **Bento Grid de Projetos Reais:**
-   - *criacovilha.pt (CéuInquieto):* Manutenção e estabilidade técnica de portal em WordPress/CMS.
+3. **Bento Grid de Projetos Reais & Repositórios GitHub:**
+   - *criacovilha.pt (CéuInquieto):* Manutenção e estabilidade técnica de portal em WordPress/CMS com print real do website.
+   - *Projecto Emprego AI (FastAPI + Google Gemini):* Plataforma SaaS com IA e web scraping massivo (NetEmpregos, LinkedIn, Indeed).
+   - *Pica-Ponto Pro (RH & Web Dashboard):* Sistema de gestão de funcionários e registo de horas em Python/Quart com relatórios em PDF.
+   - *VPS BOT Disc:* Painel de orquestração para VPS em FastAPI com reverse proxy Caddy (SSL automático).
+   - *BOT_DISCORD_AMIGOS:* Rastreador de presença em tempo real com dashboard aiohttp.
    - *Scripts Python & Linux (UBI):* Automações de apoio e tratamento de dados.
    - *Design & Assets:* Criação de mockups e tratamento visual com ferramentas de AI.
 4. **Linha Temporal de Experiência & Liderança:**

@@ -37,9 +37,10 @@ export interface ProjectItem {
   subtitle: string;
   description: string;
   tags: string[];
-  category: "Web & CMS" | "Automação & Python" | "Design & Multimédia" | "Evolt Special";
+  category: "Web & CMS" | "Automação & Python" | "Design & Multimédia" | "Evolt Special" | "Sistemas & AI";
   impactMetrics: string[];
   link?: string;
+  githubUrl?: string;
   iconName: string;
 }
 
