@@ -52,7 +52,7 @@ export function DesignPortfolio() {
       category: "Branding & Plataforma de Ensino",
       description:
         "Identidade visual completa criada no âmbito da Prova de Aptidão Profissional (PAP) para a plataforma de e-learning 'Foguete.PT'. O logótipo integra a metáfora do foguetão em progressão vertical contínua ('o ensino nunca pode parar'), contrastando tons de roxo e rosa (calma, concentração e modernidade) concebido nativamente para interfaces em tema escuro.",
-      imageSrc: "/images/design/logo_foguetes.png",
+      imageSrc: "/images/design/logo_foguetes.png?v=2",
       imageAlt: "Logótipo e identidade visual da Foguete.PT",
       tags: ["Identidade Visual", "Branding", "Vetor & Tipografia", "UI Dark Mode", "PAP"],
     },
@@ -64,14 +64,14 @@ export function DesignPortfolio() {
       category: "Identidade de Marca Regional",
       description:
         "Trabalho de design de marca para a insígnia fictícia de produtos lacticínios alentejanos 'MGil'. Elaboração de 3 propostas conceptuais distintas: a primeira centrada na árvore tradicional do montado com escudo, a segunda numa fusão minimalista da árvore com o lettering, e a terceira num ramo de folhas estilizado orientado para linhas de produto gourmet.",
-      imageSrc: "/images/design/mgil_logos.png",
+      imageSrc: "/images/design/mgil_logos.png?v=3",
       imageAlt: "Três propostas de identidade visual para MGil Lacticínios",
       tags: ["Design de Logótipos", "Adobe Illustrator", "Composição Visual", "Branding Regional"],
     },
   ];
 
   return (
-    <section id="design" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-border-subtle/50">
+    <section id="design" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Section Header with Honest, Authentic Framing */}
       <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
         <Badge variant="violet" size="sm">
