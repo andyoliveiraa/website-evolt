@@ -47,7 +47,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto mt-6 pt-6 border-t border-border-subtle/50 text-center text-[11px] text-text-muted">
-        © {new Date().getFullYear()} André Filipe Oliveira Dias. Desenvolvido com React, TypeScript, Tailwind CSS e Framer Motion.
+        © {new Date().getFullYear()} André Filipe Oliveira Dias. Feito com carinho no Antigravity e Claude Code com base nas ferramentas React, TypeScript, Tailwind CSS e Framer Motion.
       </div>
     </footer>
   );
