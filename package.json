@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "deploy:zip": "npm run build && powershell Compress-Archive -Path dist/*, dist/.htaccess -DestinationPath evolt-deploy.zip -Force",
     "preview": "vite preview"
   },
   "dependencies": {

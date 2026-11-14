@@ -1,0 +1,57 @@
+# ==============================================================================
+# Verpex / cPanel / LiteSpeed & Apache Configuration for Single Page App (SPA)
+# Subdomínio: evolt.andydias.pt
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Forçar HTTPS sempre
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Servir ficheiros e pastas existentes diretamente (PDFs, imagens, JS, CSS)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3. Encaminhar todas as outras rotas para o index.html (SPA Fallback)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ==============================================================================
+# Otimização de Performance e Compressão GZIP / Deflate
+# ==============================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
+</IfModule>
+
+# ==============================================================================
+# Gestão de Cache dos Ficheiros (Cache-Control)
+# ==============================================================================
+<IfModule mod_headers.c>
+  # Assets com hash no nome (JS, CSS em /assets/): Cache longa de 1 ano
+  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+
+  # Documento PDF Oficial do CV: Permitir cache moderada mas revalidação
+  <FilesMatch "\.pdf$">
+    Header set Cache-Control "max-age=3600, public, must-revalidate"
+    Header set Content-Disposition "inline"
+  </FilesMatch>
+
+  # index.html nunca deve ficar preso na cache para atualizações instantâneas
+  <FilesMatch "^index\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  # Segurança básica
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
