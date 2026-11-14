@@ -6,6 +6,7 @@ import { ProjectsBento } from "./components/sections/ProjectsBento";
 import { DesignPortfolio } from "./components/sections/DesignPortfolio";
 import { ExperienceTimeline } from "./components/sections/ExperienceTimeline";
 import { InteractiveCV } from "./components/sections/InteractiveCV";
+import { EngineeringShowcase } from "./components/sections/EngineeringShowcase";
 import { ContactSection } from "./components/sections/ContactSection";
 import { Footer } from "./components/layout/Footer";
 import { CVModal } from "./components/modals/CVModal";
@@ -26,6 +27,7 @@ export function App() {
         <DesignPortfolio />
         <ExperienceTimeline />
         <InteractiveCV onOpenCVModal={() => setIsCVModalOpen(true)} />
+        <EngineeringShowcase />
         <ContactSection />
       </main>
 
