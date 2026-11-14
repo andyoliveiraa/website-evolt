@@ -87,7 +87,7 @@ export function HeroSection({ onOpenCVModal }: HeroSectionProps) {
           </div>
           <div className="p-4 rounded-xl bg-surface/50 border border-border-subtle/50 text-center">
             <div className="text-2xl font-bold text-cyan-400">+1 Ano</div>
-            <div className="text-xs text-text-muted mt-1">Gestão Web criaportal.pt</div>
+            <div className="text-xs text-text-muted mt-1">Gestão Web criacovilha.pt</div>
           </div>
           <div className="p-4 rounded-xl bg-surface/50 border border-border-subtle/50 text-center">
             <div className="text-2xl font-bold text-emerald-400">Vibe Coding</div>

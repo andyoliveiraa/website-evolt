@@ -30,7 +30,7 @@ Aplicação web moderna, interativa e de alta performance desenvolvida especific
    - Estimador interativo com seleção de materiais (PLA, PETG, ABS, Resina), controlo de gramas e horas de impressão.
    - Cálculo automático de custos de filamento, energia e preço recomendado de venda com margem operacional ajustável.
 3. **Bento Grid de Projetos Reais:**
-   - *criaportal.pt (CéuInquieto):* Manutenção e estabilidade técnica de portal em WordPress/CMS.
+   - *criacovilha.pt (CéuInquieto):* Manutenção e estabilidade técnica de portal em WordPress/CMS.
    - *Scripts Python & Linux (UBI):* Automações de apoio e tratamento de dados.
    - *Design & Assets:* Criação de mockups e tratamento visual com ferramentas de AI.
 4. **Linha Temporal de Experiência & Liderança:**

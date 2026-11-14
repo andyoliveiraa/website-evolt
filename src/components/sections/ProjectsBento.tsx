@@ -43,7 +43,7 @@ export function ProjectsBento() {
 
       {/* Bento Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-        {/* Card 1: CéuInquieto (criaportal.pt) - 7 cols */}
+        {/* Card 1: CéuInquieto (criacovilha.pt) - 7 cols */}
         <Card glow="violet" className="lg:col-span-7 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
@@ -53,11 +53,11 @@ export function ProjectsBento() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-text-main">Plataforma Web CéuInquieto</h3>
-                  <span className="text-xs text-text-muted font-mono">criaportal.pt • Produção Ativa</span>
+                  <span className="text-xs text-text-muted font-mono">criacovilha.pt • Produção Ativa</span>
                 </div>
               </div>
               <a
-                href="https://criaportal.pt"
+                href="https://criacovilha.pt/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 text-xs text-violet-400 hover:text-violet-300 font-semibold p-1.5 rounded-lg hover:bg-surface-raised transition-colors"
@@ -67,12 +67,33 @@ export function ProjectsBento() {
               </a>
             </div>
 
-            <p className="text-sm text-text-muted leading-relaxed mt-4">
+            {/* Print / Screenshot do Website Real */}
+            <a
+              href="https://criacovilha.pt/"
+              target="_blank"
+              rel="noreferrer"
+              className="my-4 block relative rounded-xl overflow-hidden border border-border-subtle group/img hover:border-violet-500/40 transition-all shadow-md bg-black/40"
+            >
+              <img
+                src="/images/criacovilha-preview.png"
+                alt="Captura de ecrã do website oficial criacovilha.pt"
+                className="w-full h-44 sm:h-52 object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent flex items-end p-3">
+                <span className="text-[11px] font-mono text-violet-300 flex items-center gap-1.5 bg-surface/90 px-2.5 py-1 rounded-md border border-border-subtle backdrop-blur-sm shadow-sm">
+                  <ExternalLink className="w-3 h-3" aria-hidden="true" />
+                  https://criacovilha.pt/ • Ver Online
+                </span>
+              </div>
+            </a>
+
+            <p className="text-sm text-text-muted leading-relaxed mt-2">
               Administração técnica contínua e manutenção do portal oficial da associação. Gestão de infraestrutura em WordPress,
               implementação de design responsivo, troubleshooting em tempo real de plugins e sincronização multimédia com a redação.
             </p>
 
-            <div className="mt-5 space-y-2">
+            <div className="mt-4 space-y-2">
               {PROJECTS[0].impactMetrics.map((metric) => (
                 <div key={metric} className="flex items-center gap-2 text-xs text-text-main">
                   <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />

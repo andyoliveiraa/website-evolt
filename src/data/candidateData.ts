@@ -9,7 +9,7 @@ export const CANDIDATE: CandidateInfo = {
   linkedin: "https://linkedin.com/in/andre-filipe-oliveira-dias",
   workRegime: "Presencial na Sede (Vila de Cucujães / Aveiro) ou Regime Híbrido / Remoto",
   availabilityNote: "Total disponibilidade para início presencial imediato na sede em Vila de Cucujães. Motivado para abraçar a primeira oportunidade profissional na área de informática e sistemas digitais, trazendo dedicação máxima, facilidade de deslocação e forte apetência para aprender e acelerar processos com AI e automação.",
-  bio: "Profissional dinâmico com formação em Informática Web, Móvel e na Nuvem (UBI) e formação técnica em Comunicação & Marketing. Combino lógica de programação (Python, JavaScript, PHP, Linux), experiência real em administração técnica de CMS/WordPress (criaportal.pt) e utilização diária intensiva de ferramentas de Inteligência Artificial e Vibe Coding (Cursor, Claude Code, Copilot) para transformar ineficiências e tarefas repetitivas em fluxos digitais automatizados.",
+  bio: "Profissional dinâmico com formação em Informática Web, Móvel e na Nuvem (UBI) e formação técnica em Comunicação & Marketing. Combino lógica de programação (Python, JavaScript, PHP, Linux), experiência real em administração técnica de CMS/WordPress (criacovilha.pt) e utilização diária intensiva de ferramentas de Inteligência Artificial e Vibe Coding (Cursor, Claude Code, Copilot) para transformar ineficiências e tarefas repetitivas em fluxos digitais automatizados.",
 };
 
 export const EDUCATION: EducationItem[] = [
@@ -54,7 +54,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     type: "Sistemas Web & Gestão Técnica",
     badgeColor: "violet",
     description: [
-      "Administração técnica e manutenção contínua do website oficial (criaportal.pt).",
+      "Administração técnica e manutenção contínua do website oficial (criacovilha.pt).",
       "Gestão de conteúdos via CMS WordPress, assegurando alta disponibilidade e integridade da infraestrutura.",
       "Aplicação de conhecimentos de design responsivo, troubleshooting de erros e articulação direta com a equipa criativa.",
       "Otimização de performance de carregamento e adaptação visual a diferentes dispositivos.",
@@ -125,7 +125,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     title: "Sistemas Web & Gestão de CMS",
     icon: "Globe",
     skills: [
-      { name: "WordPress & WooCommerce", level: "Avançado", context: "Administração prática contínua, catálogos, plugins e troubleshooting no criaportal.pt." },
+      { name: "WordPress & WooCommerce", level: "Avançado", context: "Administração prática contínua, catálogos, plugins e troubleshooting no criacovilha.pt." },
       { name: "HTML5 Semântico & CSS3 Moderno", level: "Avançado", context: "Estruturação sem div soup, flexbox, grid e padrões de acessibilidade WCAG." },
       { name: "Tailwind CSS & Design Tokens", level: "Intermédio", context: "Estilização modular rápida com paletas semânticas e Dark Mode nativo." },
       { name: "Ambiente Linux & Terminal", level: "Intermédio", context: "Gestão de permissões, navegação CLI, SSH, cron jobs e rotinas de sistema na UBI." },
@@ -157,14 +157,14 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "criaportal",
-    title: "Plataforma CéuInquieto (criaportal.pt)",
+    id: "criacovilha",
+    title: "Plataforma CéuInquieto (criacovilha.pt)",
     subtitle: "Administração Técnica, CMS & Infraestrutura Web",
     description: "Gestão contínua da infraestrutura e dos conteúdos do portal oficial da CéuInquieto. Foco em estabilidade, design responsivo, integração multimédia e troubleshooting imediato de erros.",
     tags: ["WordPress", "CMS", "Troubleshooting", "Design Responsivo", "Otimização Web"],
     category: "Web & CMS",
     impactMetrics: ["100% Uptime Mantido", "Adaptação Total a Dispositivos Móveis", "Suporte Contínuo à Equipa Editorial"],
-    link: "https://criaportal.pt",
+    link: "https://criacovilha.pt/",
     iconName: "Globe",
   },
   {

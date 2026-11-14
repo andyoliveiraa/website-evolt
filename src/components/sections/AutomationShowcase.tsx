@@ -301,7 +301,7 @@ export function AutomationShowcase() {
             </div>
             <h3 className="text-xl font-bold text-text-main">Estabilidade & Operação Real</h3>
             <p className="text-text-muted text-sm mt-3 leading-relaxed">
-              Experiência prática na gestão técnica do criaportal.pt (WordPress/CMS) e histórico comprovado em liderança operacional
+              Experiência prática na gestão técnica do criacovilha.pt (WordPress/CMS) e histórico comprovado em liderança operacional
               (Pans & Company), garantindo rigor, pontualidade e resolução proativa de problemas.
             </p>
           </div>
