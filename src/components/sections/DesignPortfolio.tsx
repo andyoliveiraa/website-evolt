@@ -14,7 +14,6 @@ interface DesignItem {
   imageSrc: string;
   imageAlt: string;
   tags: string[];
-  videoUrls?: string[];
 }
 
 export function DesignPortfolio() {
@@ -29,13 +28,9 @@ export function DesignPortfolio() {
       category: "Social Media & Publicidade",
       description:
         "Gestão contínua das redes sociais da Opticalia Mirandela desde 2022 em regime de freelancer. Criação de peças gráficas para campanhas de consultas diárias, lentes de contacto, óculos progressivos/monofocais, efemérides (Dia do Riso) e produção de vídeos promocionais em After Effects para os ecrãs físicos em loja.",
-      imageSrc: "/images/design/print_insta_opt.png",
+      imageSrc: "/images/design/print_insta_opt.png?v=2",
       imageAlt: "Grelha de publicações do Instagram para a Opticalia Mirandela",
       tags: ["Meta Business Suite", "Adobe Photoshop", "After Effects", "Social Media", "Design de Conteúdo"],
-      videoUrls: [
-        "https://www.youtube.com/embed/_a7q_hjCUDA",
-        "https://www.youtube.com/embed/kfXqpk1nZAY",
-      ],
     },
     {
       id: "powerpc",
@@ -45,7 +40,7 @@ export function DesignPortfolio() {
       category: "E-commerce & Tecnologia",
       description:
         "Gestão e planeamento de redes sociais para a loja online e espaços físicos da PowerPC.PT. Elaboração de criativos e anúncios para hardware, reparação de smartphones, câmaras de ação (Insta360), aspiradores Xiaomi, impressoras e telemóveis, otimizando o alcance e envolvimento de clientes.",
-      imageSrc: "/images/design/print_insta_pwpc.png",
+      imageSrc: "/images/design/print_insta_pwpc.png?v=2",
       imageAlt: "Campanhas publicitárias para PowerPC no Instagram",
       tags: ["Marketing Digital", "Photoshop", "Hardware & Retalho", "Meta Ads", "Design Comercial"],
     },
@@ -143,15 +138,15 @@ export function DesignPortfolio() {
                     alt: item.imageAlt,
                   })
                 }
-                className="my-5 relative rounded-xl overflow-hidden border border-border-subtle group cursor-pointer bg-black/40 shadow-lg"
+                className="my-5 relative rounded-xl overflow-hidden border border-border-subtle group cursor-pointer bg-surface/60 hover:bg-surface/80 p-3 sm:p-4 flex items-center justify-center min-h-[220px] shadow-inner transition-colors"
               >
                 <img
                   src={item.imageSrc}
                   alt={item.imageAlt}
-                  className="w-full h-56 sm:h-64 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="max-h-52 sm:max-h-56 w-auto object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-lg"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4 pointer-events-none">
                   <span className="text-xs font-medium text-text-main flex items-center gap-1.5 bg-surface/90 px-3 py-1.5 rounded-lg border border-border-subtle backdrop-blur-sm">
                     <Eye className="w-3.5 h-3.5 text-violet-400" aria-hidden="true" />
                     Ampliar Imagem
@@ -166,29 +161,6 @@ export function DesignPortfolio() {
               <p className="text-sm text-text-muted leading-relaxed">
                 {item.description}
               </p>
-
-              {/* Embedded Videos for Opticalia if present */}
-              {item.videoUrls && item.videoUrls.length > 0 && (
-                <div className="mt-5 pt-4 border-t border-border-subtle">
-                  <span className="text-xs font-semibold text-text-main flex items-center gap-1.5 mb-3">
-                    <Film className="w-3.5 h-3.5 text-violet-400" aria-hidden="true" />
-                    Vídeos Promocionais & Motion (After Effects)
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {item.videoUrls.map((url, idx) => (
-                      <div key={idx} className="relative rounded-lg overflow-hidden border border-border-subtle bg-black aspect-video">
-                        <iframe
-                          src={url}
-                          title={`Vídeo publicitário ${idx + 1}`}
-                          className="w-full h-full"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
 
             {/* Footer Tags */}
@@ -206,6 +178,59 @@ export function DesignPortfolio() {
         ))}
       </div>
 
+      {/* Motion Design & Video Production Showcase (After Effects) */}
+      <div className="mt-10 p-6 sm:p-8 rounded-2xl bg-surface-raised/40 border border-border-subtle hover:border-violet-500/30 transition-colors">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <div className="flex items-center gap-2">
+              <Badge variant="violet" size="sm">
+                <Film className="w-3.5 h-3.5 mr-1" aria-hidden="true" />
+                Motion Graphics & Audiovisual
+              </Badge>
+              <span className="text-xs text-text-muted">Adobe After Effects</span>
+            </div>
+            <h3 className="text-xl font-bold text-text-main mt-2">
+              Criação de Vídeos Publicitários & Motion Design — Ecrãs Físicos Opticalia
+            </h3>
+            <p className="text-sm text-text-muted mt-1 max-w-3xl">
+              Animações e spots promocionais desenvolvidos em After Effects para exibição contínua nas montras e ecrãs interiores da loja física da Opticalia Mirandela, promovendo campanhas de rastreio visual e saúde ocular.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col">
+            <div className="relative rounded-xl overflow-hidden border border-border-subtle bg-black aspect-video shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/_a7q_hjCUDA"
+                title="Spot Publicitário 01 — Opticalia Mirandela"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <span className="text-xs text-text-muted mt-2 text-center font-medium">
+              Campanha Promocional 01 (After Effects)
+            </span>
+          </div>
+
+          <div className="flex flex-col">
+            <div className="relative rounded-xl overflow-hidden border border-border-subtle bg-black aspect-video shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/kfXqpk1nZAY"
+                title="Spot Publicitário 02 — Espaço Saúde Opticalia"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <span className="text-xs text-text-muted mt-2 text-center font-medium">
+              Campanha Espaço Saúde 02 (After Effects)
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Lightbox Modal */}
       {selectedImage && (
         <Modal
@@ -214,11 +239,11 @@ export function DesignPortfolio() {
           title={selectedImage.title}
           maxWidth="4xl"
         >
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center p-2">
             <img
               src={selectedImage.src}
               alt={selectedImage.alt}
-              className="max-h-[75vh] w-auto rounded-xl object-contain shadow-2xl border border-border-subtle"
+              className="max-h-[75vh] w-auto rounded-xl object-contain shadow-2xl border border-border-subtle bg-surface/80 p-4"
             />
             <p className="text-xs text-text-muted mt-3 text-center">
               {selectedImage.alt}
