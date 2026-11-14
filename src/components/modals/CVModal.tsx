@@ -50,7 +50,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
 
         <div className="flex flex-wrap items-center gap-2">
           <a
-            href="/cv-andre-filipe-dias.pdf"
+            href="/cv-andre-filipe-dias.pdf?v=20261114b"
             download="CV-Andre-Filipe-Oliveira-Dias.pdf"
             className="inline-flex"
           >
@@ -60,7 +60,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
             </Button>
           </a>
           <a
-            href="/cv-andre-filipe-dias.pdf"
+            href="/cv-andre-filipe-dias.pdf?v=20261114b"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex"
@@ -77,18 +77,18 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
         <div className="space-y-4">
           <div className="relative rounded-2xl overflow-hidden border border-border-subtle bg-zinc-900 shadow-2xl">
             <iframe
-              src="/cv-andre-filipe-dias.pdf#toolbar=1"
+              src="/cv-andre-filipe-dias.pdf?v=20261114b#toolbar=1"
               title="Curriculum Vitae Oficial em PDF — André Filipe Oliveira Dias"
               className="w-full h-[75vh] min-h-[620px] border-0 bg-white"
             />
           </div>
           <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-surface/50 border border-border-subtle text-xs text-text-muted">
             <span>
-              Curriculum Vitae Oficial de 2 páginas (Covilhã / Evolt)
+              Curriculum Vitae Oficial (Atualizado — Presencial on-site em Cucujães/Aveiro, Híbrido ou Remoto)
             </span>
             <div className="flex items-center gap-3">
               <a
-                href="/cv-andre-filipe-dias.pdf"
+                href="/cv-andre-filipe-dias.pdf?v=20261114b"
                 download="CV-Andre-Filipe-Oliveira-Dias.pdf"
                 className="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center gap-1"
               >
@@ -97,7 +97,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
               </a>
               <span>•</span>
               <a
-                href="/cv-andre-filipe-dias.pdf"
+                href="/cv-andre-filipe-dias.pdf?v=20261114b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-violet-400 hover:text-violet-300 font-medium inline-flex items-center gap-1"

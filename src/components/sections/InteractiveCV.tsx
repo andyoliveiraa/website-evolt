@@ -47,7 +47,7 @@ export function InteractiveCV({ onOpenCVModal }: InteractiveCVProps) {
             Visualizar CV Digital
           </Button>
           <a
-            href="/cv-andre-filipe-dias.pdf"
+            href="/cv-andre-filipe-dias.pdf?v=20261114b"
             download="CV-Andre-Filipe-Oliveira-Dias.pdf"
             className="inline-flex"
           >
@@ -57,7 +57,7 @@ export function InteractiveCV({ onOpenCVModal }: InteractiveCVProps) {
             </Button>
           </a>
           <a
-            href="/cv-andre-filipe-dias.pdf"
+            href="/cv-andre-filipe-dias.pdf?v=20261114b"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex"
