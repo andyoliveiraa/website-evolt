@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Filter, FileText, CheckCircle2 } from "lucide-react";
+import { Filter, FileText, CheckCircle2, Download, Printer } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Card } from "../ui/Card";
 import { Badge } from "../ui/Badge";
@@ -40,12 +40,33 @@ export function InteractiveCV({ onOpenCVModal }: InteractiveCVProps) {
           Explore as áreas técnicas e comportamentais com base nas necessidades práticas da equipa da Evolt.
         </p>
 
-        {/* Action Button */}
-        <div className="mt-6">
+        {/* Action Buttons */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <Button variant="primary" size="md" onClick={onOpenCVModal}>
             <FileText className="w-4 h-4 mr-2" aria-hidden="true" />
-            Visualizar CV Completo Formatado
+            Visualizar CV Digital
           </Button>
+          <a
+            href="/cv-andre-filipe-dias.pdf"
+            download="CV-Andre-Filipe-Oliveira-Dias.pdf"
+            className="inline-flex"
+          >
+            <Button variant="secondary" size="md">
+              <Download className="w-4 h-4 mr-2 text-emerald-400" aria-hidden="true" />
+              Guardar PDF Oficial
+            </Button>
+          </a>
+          <a
+            href="/cv-andre-filipe-dias.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex"
+          >
+            <Button variant="outline" size="md">
+              <Printer className="w-4 h-4 mr-2 text-cyan-400" aria-hidden="true" />
+              Abrir / Imprimir PDF
+            </Button>
+          </a>
         </div>
       </div>
 

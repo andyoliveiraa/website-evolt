@@ -1,4 +1,5 @@
-import { Printer, Mail, Phone, MapPin } from "lucide-react";
+import * as React from "react";
+import { Download, Printer, Mail, Phone, MapPin, FileText, Monitor } from "lucide-react";
 import { Modal } from "../ui/Modal";
 import { Button } from "../ui/Button";
 import { CANDIDATE, EXPERIENCES, EDUCATION, SKILL_CATEGORIES } from "../../data/candidateData";
@@ -9,27 +10,107 @@ interface CVModalProps {
 }
 
 export function CVModal({ isOpen, onClose }: CVModalProps) {
-  const handlePrint = () => {
-    window.print();
-  };
+  const [viewMode, setViewMode] = React.useState<"pdf" | "web">("pdf");
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="Curriculum Vitae Digital — André Filipe Oliveira Dias" maxWidth="4xl">
-      {/* Top Action Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 p-4 bg-surface-raised rounded-xl mb-6 border border-border-subtle print:hidden">
-        <p className="text-xs text-text-muted">
-          Este CV digital foi estruturado com base nos dados oficiais e está formatado para leitura de recrutadores.
-        </p>
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      title="Curriculum Vitae Oficial — André Filipe Oliveira Dias"
+      maxWidth="5xl"
+    >
+      {/* Top Action Bar with Direct PDF Download & Mode Switch */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 bg-surface-raised rounded-xl mb-6 border border-border-subtle">
         <div className="flex items-center gap-2">
-          <Button variant="primary" size="sm" onClick={handlePrint}>
-            <Printer className="w-4 h-4 mr-1.5" aria-hidden="true" />
-            Imprimir / Guardar PDF
-          </Button>
+          <div className="inline-flex rounded-lg bg-surface p-1 border border-border-subtle">
+            <button
+              onClick={() => setViewMode("pdf")}
+              className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all flex items-center gap-1.5 ${
+                viewMode === "pdf"
+                  ? "bg-violet-600 text-white shadow-sm"
+                  : "text-text-muted hover:text-text-main"
+              }`}
+            >
+              <FileText className="w-3.5 h-3.5" aria-hidden="true" />
+              Documento PDF Oficial
+            </button>
+            <button
+              onClick={() => setViewMode("web")}
+              className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all flex items-center gap-1.5 ${
+                viewMode === "web"
+                  ? "bg-violet-600 text-white shadow-sm"
+                  : "text-text-muted hover:text-text-main"
+              }`}
+            >
+              <Monitor className="w-3.5 h-3.5" aria-hidden="true" />
+              Versão Web Interativa
+            </button>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2">
+          <a
+            href="/cv-andre-filipe-dias.pdf"
+            download="CV-Andre-Filipe-Oliveira-Dias.pdf"
+            className="inline-flex"
+          >
+            <Button variant="primary" size="sm">
+              <Download className="w-4 h-4 mr-1.5" aria-hidden="true" />
+              Guardar / Descarregar PDF
+            </Button>
+          </a>
+          <a
+            href="/cv-andre-filipe-dias.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex"
+          >
+            <Button variant="secondary" size="sm">
+              <Printer className="w-4 h-4 mr-1.5 text-cyan-400" aria-hidden="true" />
+              Abrir / Imprimir PDF
+            </Button>
+          </a>
         </div>
       </div>
 
-      {/* Printable Sheet View */}
-      <div className="bg-surface p-6 sm:p-8 rounded-2xl border border-border-strong text-text-main space-y-8 font-sans">
+      {viewMode === "pdf" ? (
+        <div className="space-y-4">
+          <div className="relative rounded-2xl overflow-hidden border border-border-subtle bg-zinc-900 shadow-2xl">
+            <iframe
+              src="/cv-andre-filipe-dias.pdf#toolbar=1"
+              title="Curriculum Vitae Oficial em PDF — André Filipe Oliveira Dias"
+              className="w-full h-[75vh] min-h-[620px] border-0 bg-white"
+            />
+          </div>
+          <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-surface/50 border border-border-subtle text-xs text-text-muted">
+            <span>
+              Curriculum Vitae Oficial de 2 páginas (Covilhã / Evolt)
+            </span>
+            <div className="flex items-center gap-3">
+              <a
+                href="/cv-andre-filipe-dias.pdf"
+                download="CV-Andre-Filipe-Oliveira-Dias.pdf"
+                className="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center gap-1"
+              >
+                <Download className="w-3.5 h-3.5" aria-hidden="true" />
+                Descarregar Ficheiro
+              </a>
+              <span>•</span>
+              <a
+                href="/cv-andre-filipe-dias.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-violet-400 hover:text-violet-300 font-medium inline-flex items-center gap-1"
+              >
+                <Printer className="w-3.5 h-3.5" aria-hidden="true" />
+                Imprimir Documento
+              </a>
+            </div>
+          </div>
+        </div>
+      ) : (
+        /* Printable Sheet View */
+        <div className="bg-surface p-6 sm:p-8 rounded-2xl border border-border-strong text-text-main space-y-8 font-sans">
         {/* Header Profile */}
         <div className="border-b border-border-strong pb-6">
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-text-main">
@@ -141,6 +222,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
           {CANDIDATE.availabilityNote}
         </div>
       </div>
+      )}
     </Modal>
   );
 }
