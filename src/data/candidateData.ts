@@ -1,0 +1,200 @@
+import { CandidateInfo, ExperienceItem, EducationItem, SkillCategory, ProjectItem } from "../types";
+
+export const CANDIDATE: CandidateInfo = {
+  name: "André Filipe Oliveira Dias",
+  headline: "Sistemas Digitais, Automação & AI Aplicada",
+  location: "Covilhã / São João da Madeira, Portugal",
+  email: "andrexxdias@hotmail.com",
+  phone: "(+351) 965398851",
+  linkedin: "https://linkedin.com/in/andre-filipe-oliveira-dias",
+  workRegime: "Presencial na Sede (Vila de Cucujães / Aveiro) ou Regime Híbrido / Remoto",
+  availabilityNote: "Total disponibilidade para início presencial imediato na sede em Vila de Cucujães. Motivado para abraçar a primeira oportunidade profissional na área de informática e sistemas digitais, trazendo dedicação máxima, facilidade de deslocação e forte apetência para aprender e acelerar processos com AI e automação.",
+  bio: "Profissional dinâmico com formação em Informática Web, Móvel e na Nuvem (UBI) e formação técnica em Comunicação & Marketing. Combino lógica de programação (Python, JavaScript, PHP, Linux), experiência real em administração técnica de CMS/WordPress (criaportal.pt) e utilização diária intensiva de ferramentas de Inteligência Artificial e Vibe Coding (Cursor, Claude Code, Copilot) para transformar ineficiências e tarefas repetitivas em fluxos digitais automatizados.",
+};
+
+export const EDUCATION: EducationItem[] = [
+  {
+    institution: "Universidade da Beira Interior (UBI)",
+    course: "Informática Web, Móvel e na Nuvem",
+    period: "2022 - Presente",
+    status: "Frequência Universitária",
+    details: "Estudos superiores focados em programação estruturada (Python, JavaScript, PHP, C), administração de servidores Linux, arquiteturas cliente-servidor, bases de dados relacionais (MySQL) e engenharia de software.",
+  },
+  {
+    institution: "Escola Profissional de Murça",
+    course: "Técnico de Comunicação, Marketing, Relações Públicas e Publicidade (QEQ Nível 4)",
+    period: "2020 - 2022",
+    status: "Concluído",
+    details: "Formação técnica especializada em comunicação interpessoal assertiva, campanhas digitais, produção multimédia, redação de copy e gestão de relacionamentos com clientes.",
+  },
+];
+
+export const EXPERIENCES: ExperienceItem[] = [
+  {
+    id: "pans",
+    role: "Gestor de Turno",
+    company: "Pans & Company",
+    period: "10/08/2026 - 23/10/2026",
+    location: "Covilhã, Portugal",
+    type: "Liderança Operacional",
+    badgeColor: "emerald",
+    description: [
+      "Liderança e gestão operacional de equipa em ambiente de ritmo acelerado.",
+      "Planeamento diário de fluxos de trabalho, gestão de prioridades e resolução ágil de incidentes operacionais.",
+      "Controlo rigoroso de qualidade, conformidade de procedimentos e otimização de rotinas de serviço.",
+    ],
+    skills: ["Liderança de Equipas", "Resolução de Problemas Sob Pressão", "Gestão de Stocks", "Otimização de Processos"],
+  },
+  {
+    id: "ceuinquieto",
+    role: "Dirigente Associativo & Web Admin",
+    company: "CéuInquieto - Associação de Comunicação Criativa",
+    period: "10/09/2025 - 10/09/2026",
+    location: "Covilhã, Portugal",
+    type: "Sistemas Web & Gestão Técnica",
+    badgeColor: "violet",
+    description: [
+      "Administração técnica e manutenção contínua do website oficial (criaportal.pt).",
+      "Gestão de conteúdos via CMS WordPress, assegurando alta disponibilidade e integridade da infraestrutura.",
+      "Aplicação de conhecimentos de design responsivo, troubleshooting de erros e articulação direta com a equipa criativa.",
+      "Otimização de performance de carregamento e adaptação visual a diferentes dispositivos.",
+    ],
+    skills: ["WordPress / CMS", "Troubleshooting Web", "HTML5 & CSS3", "Manutenção de Servidores", "Design Responsivo"],
+  },
+  {
+    id: "teleperformance",
+    role: "Outbound Sales Representative",
+    company: "Teleperformance Portugal",
+    period: "14/10/2025 - 07/08/2026",
+    location: "Covilhã, Portugal",
+    type: "Comunicação & Vendas",
+    badgeColor: "cyan",
+    description: [
+      "Comunicação assertiva e escuta ativa na identificação de necessidades e apresentação de soluções digitais adaptadas.",
+      "Registo detalhado e rigoroso de dados em plataformas CRM empresariais.",
+      "Gestão eficiente de tempo e superação consistente de metas de produtividade e KPIs estipulados.",
+    ],
+    skills: ["CRM", "Comunicação Persuasiva", "Cumprimento de Metas", "Escuta Ativa", "Gestão de Tempo"],
+  },
+  {
+    id: "anitudes",
+    role: "Técnico de Bar & Operação Comercial",
+    company: "Anitudes - Animação Turística e Desportiva",
+    period: "20/06/2025 - 30/09/2025",
+    location: "Mirandela, Portugal",
+    type: "Autonomia & Gestão de Recursos",
+    badgeColor: "emerald",
+    description: [
+      "Gestão e operação com autonomia total em ponto de venda comercial.",
+      "Controlo financeiro de caixa, reconciliação de dados em sistema POS e inventário de stocks.",
+      "Resolução prática de imprevistos e foco contínuo na satisfação do cliente.",
+    ],
+    skills: ["Autonomia Total", "Sistemas POS", "Gestão de Stocks", "Controlo de Caixa"],
+  },
+  {
+    id: "powerpc",
+    role: "Assistente de Loja & Suporte Técnico (Estágio)",
+    company: "Power PC",
+    period: "01/05/2022 - 25/07/2022",
+    location: "Mirandela, Portugal",
+    type: "Hardware & Sistemas",
+    badgeColor: "cyan",
+    description: [
+      "Atendimento presencial e suporte técnico de hardware e software com 300 horas práticas cumpridas.",
+      "Diagnóstico e reparação de equipamentos informáticos, substituição de componentes e formatações.",
+      "Conferência de componentes em sistemas informáticos e organização de stock.",
+    ],
+    skills: ["Suporte Técnico Hardware", "Sistemas Operativos", "Diagnóstico de Avarias", "Atendimento Presencial"],
+  },
+];
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    id: "ai-vibe",
+    title: "AI, Automação & Vibe Coding",
+    icon: "Bot",
+    skills: [
+      { name: "Vibe Coding & Prototipagem com AI", level: "Avançado", context: "Desenvolvimento rápido assistido por Claude Code, Cursor e GitHub Copilot." },
+      { name: "Engenharia de Prompt & Contexto", level: "Avançado", context: "Estruturação metódica de instruções, system prompts e pipelines cognitivos." },
+      { name: "Automação com Webhooks & APIs", level: "Intermédio", context: "Conexão de formulários, sistemas de e-commerce e gatilhos automatizados." },
+      { name: "Scripts Python para Tarefas Repetitivas", level: "Intermédio", context: "Criação de bots e utilitários para extração, validação e tratamento de dados." },
+    ],
+  },
+  {
+    id: "web-cms",
+    title: "Sistemas Web & Gestão de CMS",
+    icon: "Globe",
+    skills: [
+      { name: "WordPress & WooCommerce", level: "Avançado", context: "Administração prática contínua, catálogos, plugins e troubleshooting no criaportal.pt." },
+      { name: "HTML5 Semântico & CSS3 Moderno", level: "Avançado", context: "Estruturação sem div soup, flexbox, grid e padrões de acessibilidade WCAG." },
+      { name: "Tailwind CSS & Design Tokens", level: "Intermédio", context: "Estilização modular rápida com paletas semânticas e Dark Mode nativo." },
+      { name: "Ambiente Linux & Terminal", level: "Intermédio", context: "Gestão de permissões, navegação CLI, SSH, cron jobs e rotinas de sistema na UBI." },
+    ],
+  },
+  {
+    id: "prog",
+    title: "Lógica Técnica & Programação",
+    icon: "Code",
+    skills: [
+      { name: "Python", level: "Intermédio", context: "Scripts de automação, manipulação de ficheiros JSON/CSV e lógica computacional." },
+      { name: "JavaScript / TypeScript", level: "Intermédio", context: "Interatividade web moderna, consumo de endpoints REST e componentes reativos." },
+      { name: "PHP & MySQL", level: "Prático", context: "Consultas estruturadas, arquitetura LAMP e manutenção de backends WordPress." },
+      { name: "Git & Controlo de Versões", level: "Intermédio", context: "Commits semânticos, gestão de branches e colaboração via GitHub." },
+    ],
+  },
+  {
+    id: "comm-sales",
+    title: "Comunicação, Gestão & Multimédia",
+    icon: "Users",
+    skills: [
+      { name: "Liderança Operacional & Turnos", level: "Avançado", context: "Gestão e motivação de equipa comprovada na Pans & Company." },
+      { name: "Comunicação Assertiva & Vendas", level: "Avançado", context: "Formação técnica de Marketing e experiência prática diária na Teleperformance." },
+      { name: "Adobe Photoshop & Lightroom", level: "Intermédio", context: "Edição gráfica, tratamento de imagem e preparação de assets visuais para web." },
+      { name: "Adobe Premiere Pro & After Effects", level: "Prático", context: "Edição de vídeo, recortes dinâmicos e conteúdo para redes sociais e apresentações." },
+    ],
+  },
+];
+
+export const PROJECTS: ProjectItem[] = [
+  {
+    id: "criaportal",
+    title: "Plataforma CéuInquieto (criaportal.pt)",
+    subtitle: "Administração Técnica, CMS & Infraestrutura Web",
+    description: "Gestão contínua da infraestrutura e dos conteúdos do portal oficial da CéuInquieto. Foco em estabilidade, design responsivo, integração multimédia e troubleshooting imediato de erros.",
+    tags: ["WordPress", "CMS", "Troubleshooting", "Design Responsivo", "Otimização Web"],
+    category: "Web & CMS",
+    impactMetrics: ["100% Uptime Mantido", "Adaptação Total a Dispositivos Móveis", "Suporte Contínuo à Equipa Editorial"],
+    link: "https://criaportal.pt",
+    iconName: "Globe",
+  },
+  {
+    id: "python-ubi",
+    title: "Scripts de Automação & Processamento (UBI)",
+    subtitle: "Scripts Python & Utilitários em Ambiente Linux",
+    description: "Desenvolvimento de rotinas e scripts de apoio desenvolvidos no âmbito de Informática Web, Móvel e na Nuvem. Extração automatizada de dados, manipulação de estruturas JSON/CSV e integração com APIs.",
+    tags: ["Python", "Linux CLI", "APIs & Webhooks", "Data Processing", "MySQL"],
+    category: "Automação & Python",
+    impactMetrics: ["Redução de Tempo em Tarefas Manuais", "Validação Automática de Dados", "Processamento em Lote"],
+    iconName: "Terminal",
+  },
+  {
+    id: "multimedia-assets",
+    title: "Produção Criativa & Assets Digitais",
+    subtitle: "Design Visual, Mockups & Geração com AI",
+    description: "Criação de identidades visuais, tratamento de imagens de produto para comércio eletrónico e workflows acelerados com geradores de imagem de inteligência artificial para marketing e interfaces.",
+    tags: ["Adobe Photoshop", "Lightroom", "AI Generation", "UI/UX", "Brand Assets"],
+    category: "Design & Multimédia",
+    impactMetrics: ["Assets Otimizados para Web", "Consistência de Marca", "Iteração Rápida com Ferramentas AI"],
+    iconName: "Palette",
+  },
+  {
+    id: "evolt-calculator",
+    title: "Simulador de Encomendas & Produção 3D (Evolt Special)",
+    subtitle: "Calculadora de Filamento, Tempo de Máquina & Margens de Impressão 3D",
+    description: "Mini-ferramenta interativa desenvolvida especificamente para este portfólio, demonstrando a compreensão prática do modelo de negócio da Evolt. Estima custos de PLA/PETG/ABS, consumo elétrico e rentabilidade por peça.",
+    tags: ["Evolt Special", "Impressão 3D", "Interatividade React", "Lógica de Negócio", "Calculadora"],
+    category: "Evolt Special",
+    impactMetrics: ["Estimativa Imediata de Custos", "Parâmetros Configuráveis (PLA/PETG/ABS)", "Orientado à Produção Real"],
+    iconName: "Cpu",
+  },
+];
