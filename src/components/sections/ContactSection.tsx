@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, MessageSquare, ExternalLink, Sparkles } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare, ExternalLink, Sparkles, Linkedin, Github } from "lucide-react";
 import { Card } from "../ui/Card";
 import { Badge } from "../ui/Badge";
 import { CANDIDATE } from "../../data/candidateData";
@@ -76,6 +76,48 @@ export function ContactSection() {
                 </div>
               </div>
               <ExternalLink className="w-4 h-4 text-text-muted group-hover:text-emerald-400 transition-colors shrink-0" aria-hidden="true" />
+            </a>
+
+            {/* LinkedIn Channel */}
+            <a
+              href={CANDIDATE.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-5 rounded-2xl bg-surface border border-border-subtle hover:border-[#0A66C2] hover:shadow-lg hover:shadow-[#0A66C2]/10 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-[#0A66C2]/10 border border-[#0A66C2]/20 flex items-center justify-center text-[#0A66C2] group-hover:scale-110 transition-transform">
+                  <Linkedin className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <div>
+                  <span className="text-xs text-text-muted block font-mono">LinkedIn Oficial</span>
+                  <span className="text-sm font-bold text-text-main group-hover:text-[#0A66C2] transition-colors">
+                    /in/andrexxdias
+                  </span>
+                </div>
+              </div>
+              <ExternalLink className="w-4 h-4 text-text-muted group-hover:text-[#0A66C2] transition-colors shrink-0" aria-hidden="true" />
+            </a>
+
+            {/* GitHub Channel */}
+            <a
+              href={CANDIDATE.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-5 rounded-2xl bg-surface border border-border-subtle hover:border-violet-400 hover:shadow-lg hover:shadow-violet-500/10 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 group-hover:scale-110 transition-transform">
+                  <Github className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <div>
+                  <span className="text-xs text-text-muted block font-mono">GitHub Repositórios</span>
+                  <span className="text-sm font-bold text-text-main group-hover:text-violet-400 transition-colors">
+                    @andyoliveiraa
+                  </span>
+                </div>
+              </div>
+              <ExternalLink className="w-4 h-4 text-text-muted group-hover:text-violet-400 transition-colors shrink-0" aria-hidden="true" />
             </a>
           </div>
 

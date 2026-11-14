@@ -7,6 +7,7 @@ import { DesignPortfolio } from "./components/sections/DesignPortfolio";
 import { ExperienceTimeline } from "./components/sections/ExperienceTimeline";
 import { InteractiveCV } from "./components/sections/InteractiveCV";
 import { EngineeringShowcase } from "./components/sections/EngineeringShowcase";
+import { SocialProfilesSection } from "./components/sections/SocialProfilesSection";
 import { ContactSection } from "./components/sections/ContactSection";
 import { Footer } from "./components/layout/Footer";
 import { CVModal } from "./components/modals/CVModal";
@@ -28,6 +29,7 @@ export function App() {
         <ExperienceTimeline />
         <InteractiveCV onOpenCVModal={() => setIsCVModalOpen(true)} />
         <EngineeringShowcase />
+        <SocialProfilesSection />
         <ContactSection />
       </main>
 

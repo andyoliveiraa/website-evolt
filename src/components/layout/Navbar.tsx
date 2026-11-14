@@ -17,6 +17,7 @@ export function Navbar({ onOpenCVModal }: NavbarProps) {
     { label: "Trajetória", href: "#experiencia" },
     { label: "Competências", href: "#competencias" },
     { label: "Engenharia & AI", href: "#engenharia" },
+    { label: "Perfis", href: "#perfis" },
   ];
 
   return (

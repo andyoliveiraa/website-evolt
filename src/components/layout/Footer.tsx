@@ -1,4 +1,5 @@
-import { ArrowUp, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowUp, Sparkles, CheckCircle2, Github, Linkedin } from "lucide-react";
+import { CANDIDATE } from "../../data/candidateData";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -34,16 +35,37 @@ export function Footer() {
           </span>
         </div>
 
-        {/* Back to top */}
-        <button
-          type="button"
-          onClick={scrollToTop}
-          aria-label="Voltar ao topo da página"
-          className="flex items-center gap-1.5 p-2 rounded-lg hover:bg-surface-raised text-text-muted hover:text-text-main transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-        >
-          <span>Voltar ao topo</span>
-          <ArrowUp className="w-4 h-4" aria-hidden="true" />
-        </button>
+        {/* Social Links & Back to top */}
+        <div className="flex items-center gap-3">
+          <a
+            href={CANDIDATE.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Perfil de André Dias no GitHub"
+            className="p-2 rounded-lg bg-surface hover:bg-surface-raised border border-border-subtle text-text-muted hover:text-text-main transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            <Github className="w-4 h-4" aria-hidden="true" />
+          </a>
+          <a
+            href={CANDIDATE.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Perfil de André Dias no LinkedIn"
+            className="p-2 rounded-lg bg-surface hover:bg-surface-raised border border-border-subtle text-text-muted hover:text-[#0A66C2] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A66C2]"
+          >
+            <Linkedin className="w-4 h-4" aria-hidden="true" />
+          </a>
+
+          <button
+            type="button"
+            onClick={scrollToTop}
+            aria-label="Voltar ao topo da página"
+            className="flex items-center gap-1.5 p-2 rounded-lg hover:bg-surface-raised text-text-muted hover:text-text-main transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            <span>Topo</span>
+            <ArrowUp className="w-4 h-4" aria-hidden="true" />
+          </button>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto mt-6 pt-6 border-t border-border-subtle/50 text-center text-[11px] text-text-muted">
