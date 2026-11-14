@@ -13,6 +13,7 @@ export function Navbar({ onOpenCVModal }: NavbarProps) {
     { label: "Sobre", href: "#sobre" },
     { label: "Automação & AI", href: "#automacao" },
     { label: "Projetos", href: "#projetos" },
+    { label: "Design", href: "#design" },
     { label: "Trajetória", href: "#experiencia" },
     { label: "Competências", href: "#competencias" },
   ];

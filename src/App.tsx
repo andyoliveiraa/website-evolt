@@ -3,6 +3,7 @@ import { Navbar } from "./components/layout/Navbar";
 import { HeroSection } from "./components/sections/HeroSection";
 import { AutomationShowcase } from "./components/sections/AutomationShowcase";
 import { ProjectsBento } from "./components/sections/ProjectsBento";
+import { DesignPortfolio } from "./components/sections/DesignPortfolio";
 import { ExperienceTimeline } from "./components/sections/ExperienceTimeline";
 import { InteractiveCV } from "./components/sections/InteractiveCV";
 import { ContactSection } from "./components/sections/ContactSection";
@@ -22,6 +23,7 @@ export function App() {
         <HeroSection onOpenCVModal={() => setIsCVModalOpen(true)} />
         <AutomationShowcase />
         <ProjectsBento />
+        <DesignPortfolio />
         <ExperienceTimeline />
         <InteractiveCV onOpenCVModal={() => setIsCVModalOpen(true)} />
         <ContactSection />
